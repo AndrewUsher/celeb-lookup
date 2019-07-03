@@ -40,7 +40,7 @@ const Birthdays = ({ navigation }) => {
   }, [])
   return (
     <View>
-      {!loading && <BirthdaySkeleton />}
+      {loading && <BirthdaySkeleton />}
       {!celebs.length ? null : (
         <ScrollView>
           <Card containerStyle={{ padding: 0 }}>
