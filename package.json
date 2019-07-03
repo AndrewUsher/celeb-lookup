@@ -26,8 +26,17 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "babel-preset-expo": "^5.1.1",
     "concurrently": "^4.1.1",
+    "eslint": "^6.0.1",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-standard": "^4.0.0",
     "nodemon": "^1.19.1"
   },
   "private": true
