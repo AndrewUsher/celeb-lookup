@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import { View } from 'react-native'
+import React, { useState } from 'react'
 import { Button, Input } from 'react-native-elements'
 import styled from 'styled-components/native'
 import {
@@ -45,7 +44,6 @@ const Home = ({ navigation }) => {
   const [dayError, setDayError] = useState(null)
   const clearMonthError = () => setMonthError(null)
   const clearDayError = () => setDayError(null)
-
   const goToBirthdaysPage = () => {
     const formattedMonth = formatMonth(month)
     const formattedDay = formatDay(day)
