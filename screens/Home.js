@@ -45,12 +45,7 @@ const Home = ({ navigation }) => {
   const [dayError, setDayError] = useState(null)
   const clearMonthError = () => setMonthError(null)
   const clearDayError = () => setDayError(null)
-  useEffect(() => {
-    if (month || day) {
-      setDay(null)
-      setMonth(null)
-    }
-  }, [])
+
   const goToBirthdaysPage = () => {
     const formattedMonth = formatMonth(month)
     const formattedDay = formatDay(day)
