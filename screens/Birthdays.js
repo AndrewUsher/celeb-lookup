@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, ScrollView, View } from 'react-native'
-import { Card, ListItem } from 'react-native-elements'
+import React, { Fragment, useEffect, useState } from 'react'
+import { ActivityIndicator, ScrollView } from 'react-native'
+import { ListItem } from 'react-native-elements'
 
 const Birthdays = ({ navigation }) => {
   const [loading, setLoading] = useState(true)
@@ -19,22 +19,21 @@ const Birthdays = ({ navigation }) => {
       .catch(console.log)
   }, [])
   return (
-    <View>
+    <Fragment>
       {loading && <ActivityIndicator />}
       {!celebs.length ? null : (
         <ScrollView>
-          <Card containerStyle={{ padding: 0 }}>
-            {celebs.map(celeb => (
-              <ListItem
-                key={celeb._id}
-                leftAvatar={{ source: { uri: celeb.image } }}
-                title={celeb.name}
-              />
-            ))}
-          </Card>
+          {celebs.map(celeb => (
+            <ListItem
+              key={celeb._id}
+              leftAvatar={{ source: { uri: celeb.image } }}
+              title={celeb.name}
+              bottomDivider
+            />
+          ))}
         </ScrollView>
       )}
-    </View>
+    </Fragment>
   )
 }
 
