@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react'
+import { WebBrowser } from 'expo'
 import { ActivityIndicator, ScrollView } from 'react-native'
 import { ListItem } from 'react-native-elements'
+import { launchGoogleSearch } from '../helpers'
 
 const Birthdays = ({ navigation }) => {
   const [loading, setLoading] = useState(true)
@@ -18,6 +20,7 @@ const Birthdays = ({ navigation }) => {
       })
       .catch(console.log)
   }, [])
+
   return (
     <Fragment>
       {loading && <ActivityIndicator />}
@@ -28,6 +31,7 @@ const Birthdays = ({ navigation }) => {
               key={celeb._id}
               leftAvatar={{ source: { uri: celeb.image } }}
               title={celeb.name}
+              onPress={launchGoogleSearch(celeb.name)}
               bottomDivider
             />
           ))}
