@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import { WebBrowser } from 'expo'
 import { ActivityIndicator, ScrollView } from 'react-native'
 import { ListItem } from 'react-native-elements'
 import { launchGoogleSearch } from '../helpers'
@@ -20,7 +19,6 @@ const Birthdays = ({ navigation }) => {
       })
       .catch(console.log)
   }, [])
-
   return (
     <Fragment>
       {loading && <ActivityIndicator />}
