@@ -1,4 +1,4 @@
-import { WebBrowser } from 'expo'
+import { openBrowserAsync } from 'expo-web-browser'
 
 const border = (width, color) => ({
   borderBottomWidth: width,
@@ -17,7 +17,7 @@ const validateDay = day => parseInt(day, 10) <= 31
 
 const launchGoogleSearch = (name) => async () => {
   const encodedName = encodeURIComponent(name)
-  await WebBrowser.openBrowserAsync(`https://google.com/search?q=${encodedName}`)
+  await openBrowserAsync(`https://google.com/search?q=${encodedName}`)
 }
 
 export {
