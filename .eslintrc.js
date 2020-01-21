@@ -1,10 +1,10 @@
 module.exports = {
-  extends: ['standard', 'react'],
-  rules: {
-    indent: ['error', 2],
-    semi: ['error', 'never']
-  },
+  parser: 'babel-eslint',
+  extends: ['@drewster'],
   env: {
     browser: true
+  },
+  rules: {
+    'react/prop-types': 0
   }
 }

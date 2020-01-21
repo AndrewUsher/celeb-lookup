@@ -1,4 +1,3 @@
-import React from 'react'
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 import BirthdaysScreen from './screens/Birthdays'
 import HomeScreen from './screens/Home'
@@ -17,7 +16,7 @@ const AppNavigator = createStackNavigator(
       headerStyle: {
         backgroundColor: '#f26100'
       },
-      title: `Who's Your Birthday Twin?`
+      title: 'Who\'s Your Birthday Twin?'
     }
   }
 )

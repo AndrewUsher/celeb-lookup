@@ -18,7 +18,7 @@ const Birthdays = ({ navigation }) => {
         setCelebs(response)
       })
       .catch(console.log)
-  }, [])
+  }, [day])
   return (
     <Fragment>
       {loading && <ActivityIndicator />}
