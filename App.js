@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppearanceProvider } from 'react-native-appearance'
+import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 import { ThemeProvider } from 'styled-components'
 import BirthdaysScreen from './screens/Birthdays'
@@ -27,11 +27,18 @@ const AppNavigator = createStackNavigator(
 
 const AppContainer = createAppContainer(AppNavigator)
 
+const AppWrapper = () => {
+  const scheme = useColorScheme()
+  return (
+    <ThemeProvider theme={theme[scheme]} >
+      <AppContainer />
+    </ThemeProvider >
+  )
+}
+
 const App = () => (
   <AppearanceProvider>
-    <ThemeProvider theme={theme}>
-      <AppContainer />
-    </ThemeProvider>
+    <AppWrapper />
   </AppearanceProvider>
 )
 

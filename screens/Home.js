@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Input } from 'react-native-elements'
 import styled from 'styled-components/native'
-import { useColorScheme } from 'react-native-appearance'
+import { withTheme } from 'styled-components'
 import {
   border,
   createError,
@@ -12,8 +12,8 @@ import {
 } from '../helpers'
 
 const HomeContainer = styled.View`
-  background-color: ${props => props.scheme === 'light' ? props.theme.light.bg : props.theme.dark.bg};
-  height: 100%;
+  background-color: ${props => props.theme.bg};
+  min-height: 100%;
   padding: 5%;
 `
 
@@ -25,24 +25,23 @@ const containerStyle = {
   marginTop: '10%'
 }
 
-const TextInput = props => (
+const TextInput = ({ inputBorder, ...props }) => (
   <Input
     containerStyle={{ marginBottom: 15, width: '100%', paddingHorizontal: 0 }}
-    inputStyle={{ paddingLeft: 20 }}
+    inputStyle={{ paddingLeft: 20, color: inputBorder }}
     inputContainerStyle={{
-      ...border(1, '#202124'),
+      ...border(1, inputBorder),
       borderRadius: 5
     }}
     labelStyle={{ borderBottomWidth: 0 }}
+    placeholderTextColor={inputBorder}
     maxLength={2}
     keyboardType="number-pad"
     {...props}
   />
 )
 
-const Home = ({ navigation }) => {
-  const scheme = useColorScheme()
-  console.log(scheme)
+const Home = ({ navigation, theme }) => {
   const [month, setMonth] = useState(null)
   const [day, setDay] = useState(null)
   const [monthError, setMonthError] = useState(null)
@@ -72,18 +71,20 @@ const Home = ({ navigation }) => {
     }
   }
   return (
-    <HomeContainer scheme={scheme}>
+    <HomeContainer>
       <TextInput
         value={month}
         onChangeText={setMonth}
         placeholder="Month"
         errorMessage={monthError}
+        inputBorder={theme.inputBorder}
       />
       <TextInput
         value={day}
         onChangeText={setDay}
         placeholder="Day"
         errorMessage={dayError}
+        inputBorder={theme.inputBorder}
       />
       <Button
         raised
@@ -96,4 +97,4 @@ const Home = ({ navigation }) => {
   )
 }
 
-export default Home
+export default withTheme(Home)
