@@ -1,6 +1,10 @@
+import React from 'react'
+import { AppearanceProvider } from 'react-native-appearance'
 import { createStackNavigator, createAppContainer } from 'react-navigation'
+import { ThemeProvider } from 'styled-components'
 import BirthdaysScreen from './screens/Birthdays'
 import HomeScreen from './screens/Home'
+import theme from './theme'
 
 const AppNavigator = createStackNavigator(
   {
@@ -21,4 +25,14 @@ const AppNavigator = createStackNavigator(
   }
 )
 
-export default createAppContainer(AppNavigator)
+const AppContainer = createAppContainer(AppNavigator)
+
+const App = () => (
+  <AppearanceProvider>
+    <ThemeProvider theme={theme}>
+      <AppContainer />
+    </ThemeProvider>
+  </AppearanceProvider>
+)
+
+export default App

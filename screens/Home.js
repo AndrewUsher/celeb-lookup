@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Input } from 'react-native-elements'
 import styled from 'styled-components/native'
+import { useColorScheme } from 'react-native-appearance'
 import {
   border,
   createError,
@@ -11,6 +12,8 @@ import {
 } from '../helpers'
 
 const HomeContainer = styled.View`
+  background-color: ${props => props.scheme === 'light' ? props.theme.light.bg : props.theme.dark.bg};
+  height: 100%;
   padding: 5%;
 `
 
@@ -38,6 +41,8 @@ const TextInput = props => (
 )
 
 const Home = ({ navigation }) => {
+  const scheme = useColorScheme()
+  console.log(scheme)
   const [month, setMonth] = useState(null)
   const [day, setDay] = useState(null)
   const [monthError, setMonthError] = useState(null)
@@ -67,7 +72,7 @@ const Home = ({ navigation }) => {
     }
   }
   return (
-    <HomeContainer>
+    <HomeContainer scheme={scheme}>
       <TextInput
         value={month}
         onChangeText={setMonth}
