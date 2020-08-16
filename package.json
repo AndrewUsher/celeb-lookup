@@ -1,5 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "version": "1.0.0",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -31,7 +32,8 @@
     "@drewster/eslint-config": "1.0.2",
     "babel-eslint": "10.0.2",
     "babel-preset-expo": "8.0.0",
-    "eslint": "6.0.1"
+    "eslint": "6.0.1",
+    "standard-version": "9.0.0"
   },
   "private": true
 }
