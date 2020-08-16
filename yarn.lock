@@ -6684,10 +6684,10 @@ react-native-status-bar-height@^2.2.0:
   resolved "https://registry.yarnpkg.com/react-native-status-bar-height/-/react-native-status-bar-height-2.3.1.tgz#b92ce9112c2367290847ac11284d9d84a6330169"
   integrity sha512-m9nGKYfFn6ljF1abafzF5cFaD9JCzXwj7kNE9CuF+g0TgtItH70eY2uHaCV9moENTftqd5XIS3Cx0mf4WfistA==
 
-react-native-svg-animated-linear-gradient@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/react-native-svg-animated-linear-gradient/-/react-native-svg-animated-linear-gradient-0.3.0.tgz#593e16a864f4f92650be309f74a093f127c48bc8"
-  integrity sha512-HpCfU2n4ZP64kxl0+6bN0kMtBCKQQVCMzbJLRCrcWnT5qjNBTgsC9uTKjoS4dW7PG/mYiz42mFooHpCM128RjQ==
+react-native-svg-animated-linear-gradient@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-svg-animated-linear-gradient/-/react-native-svg-animated-linear-gradient-0.4.0.tgz#5faf65d7576f3d9cf3419f29a25c60495ad547e6"
+  integrity sha512-0KQy6Es+YcwvERwaUR3giTaawyY/Rh1Ew7T3NCWP0j8VoZmIlERX5i2FOwGJTbBij6ehboPzPQvJdW6lFS4JKg==
   dependencies:
     d3-interpolate "^1.1.5"
 
