@@ -14,7 +14,7 @@
     "release:patch": "standard-version --release-as patch"
   },
   "dependencies": {
-    "expo": "36.0.2",
+    "expo": "38.0.9",
     "expo-web-browser": "8.0.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
