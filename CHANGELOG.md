@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/AndrewUsher/celeb-lookup/compare/v1.0.0...v1.1.0) (2020-08-16)
+
+
+### Features
+
+* upgrade to Expo 38 SDK ([6a937d6](https://github.com/AndrewUsher/celeb-lookup/commit/6a937d6aa2a465cc826611f3ce11dd53ff55aff6))
+
 ## 1.0.0 (2020-08-16)
 
 
