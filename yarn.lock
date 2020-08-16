@@ -6757,10 +6757,10 @@ react-native-web@0.11.7:
     use-subscription "^1.0.0"
     whatwg-fetch "^3.0.0"
 
-react-navigation-animated-switch@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-navigation-animated-switch/-/react-navigation-animated-switch-0.2.0.tgz#9c2b39431095012972a52921b1987de44fee1bac"
-  integrity sha512-Y+uMjKz5uC2IVQUaNacmEKPOlSc/B2x6o5M7IcVJ5wwxScem8cW2hQKnZwpEI0Z/CcwFkvjkwYv0gV4+AnovOw==
+react-navigation-animated-switch@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-animated-switch/-/react-navigation-animated-switch-0.6.0.tgz#0f2750cbbc7f59da47edf928f9ff267e9cae18b2"
+  integrity sha512-nVElBgCT3cT31G/njsxvKy9F3kDZNvL1i5WkTRq4VO73PmW6ETooJyEfotdQqhzJnAS0ZoINL1ApKTF9ryra8g==
 
 react-navigation-drawer@~1.2.1:
   version "1.2.1"
