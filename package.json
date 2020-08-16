@@ -27,7 +27,7 @@
     "react-native-svg": "12.1.0",
     "react-native-svg-animated-linear-gradient": "0.3.0",
     "react-native-web": "0.11.7",
-    "react-navigation": "3.11.0",
+    "react-navigation": "3.13.0",
     "react-navigation-animated-switch": "0.2.0",
     "styled-components": "5.0.0"
   },
