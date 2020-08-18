@@ -1,37 +1,31 @@
 import React from 'react'
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
-import { createStackNavigator, createAppContainer } from 'react-navigation'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 import { ThemeProvider } from 'styled-components'
 import BirthdaysScreen from './screens/Birthdays'
 import HomeScreen from './screens/Home'
 import theme from './theme'
 
-const AppNavigator = createStackNavigator(
-  {
-    Home: {
-      screen: HomeScreen
-    },
-    Birthdays: {
-      screen: BirthdaysScreen
-    }
-  },
-  {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: '#f26100'
-      },
-      title: 'Who\'s Your Birthday Twin?'
-    }
-  }
-)
+const { Navigator, Screen } = createStackNavigator()
 
-const AppContainer = createAppContainer(AppNavigator)
+const defaultScreenOptions = {
+  headerStyle: {
+    backgroundColor: '#f26100'
+  },
+  title: 'Who\'s Your Birthday Twin?'
+}
 
 const AppWrapper = () => {
   const scheme = useColorScheme()
   return (
     <ThemeProvider theme={theme[scheme]} >
-      <AppContainer />
+      <NavigationContainer>
+        <Navigator initialRouteName="Home" screenOptions={defaultScreenOptions}>
+          <Screen name="Home" component={HomeScreen} />
+          <Screen name="Birthdays" component={BirthdaysScreen} />
+        </Navigator>
+      </NavigationContainer>
     </ThemeProvider >
   )
 }

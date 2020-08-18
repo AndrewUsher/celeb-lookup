@@ -3,11 +3,11 @@ import { ActivityIndicator, ScrollView } from 'react-native'
 import { ListItem } from 'react-native-elements'
 import { launchGoogleSearch } from '../helpers'
 
-const Birthdays = ({ navigation }) => {
+const Birthdays = ({ route }) => {
   const [loading, setLoading] = useState(true)
   const [celebs, setCelebs] = useState([])
 
-  const day = navigation.getParam('day')
+  const day = route.params.day
   useEffect(() => {
     fetch(
       `https://celeb-birthday-service.andrewusher00.now.sh/api/birthdays.js?day=${day}`
