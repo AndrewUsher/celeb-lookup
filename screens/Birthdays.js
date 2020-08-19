@@ -1,30 +1,22 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment } from 'react'
 import { ActivityIndicator, ScrollView } from 'react-native'
 import { ListItem } from 'react-native-elements'
+import { useQuery } from 'react-query'
 import { launchGoogleSearch } from '../helpers'
 
 const Birthdays = ({ route }) => {
-  const [loading, setLoading] = useState(true)
-  const [celebs, setCelebs] = useState([])
-
   const day = route.params.day
-  useEffect(() => {
-    fetch(
+  const { isLoading, data } = useQuery(['birthday', day], () => fetch(
       `https://celeb-birthday-service.andrewusher00.now.sh/api/birthdays.js?day=${day}`
-    )
-      .then(r => r.json())
-      .then(response => {
-        setLoading(false)
-        setCelebs(response)
-      })
-      .catch(console.log)
-  }, [day])
+  )
+    .then(r => r.json()))
+
   return (
     <Fragment>
-      {loading && <ActivityIndicator />}
-      {!celebs.length ? null : (
+      {isLoading && <ActivityIndicator />}
+      {data && (
         <ScrollView>
-          {celebs.map(celeb => (
+          {data.map(celeb => (
             <ListItem
               key={celeb._id}
               leftAvatar={{ source: { uri: celeb.image } }}

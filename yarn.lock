@@ -6138,6 +6138,13 @@ react-native-web@0.11.7:
     use-subscription "^1.0.0"
     whatwg-fetch "^3.0.0"
 
+react-query@2.5.14:
+  version "2.5.14"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.5.14.tgz#690bd85c83fafe8dd6453a6cafb922d475a1eea4"
+  integrity sha512-uXitanViwKKKSgpEDQZLoABziZwlF9rerDJ1qundfaVYyI2bg20AglZTT9AbMoMsd9F/okhYtB0GFUkK8bOQqg==
+  dependencies:
+    ts-toolbelt "^6.9.4"
+
 react-refresh@^0.4.0:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.4.3.tgz#966f1750c191672e76e16c2efa569150cc73ab53"
@@ -7210,6 +7217,11 @@ trim-off-newlines@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-off-newlines/-/trim-off-newlines-1.0.1.tgz#9f9ba9d9efa8764c387698bcbfeb2c848f11adb3"
   integrity sha1-n5up2e+odkw4dpi8v+sshI8RrbM=
+
+ts-toolbelt@^6.9.4:
+  version "6.15.5"
+  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-6.15.5.tgz#cb3b43ed725cb63644782c64fbcad7d8f28c0a83"
+  integrity sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
