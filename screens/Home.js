@@ -21,13 +21,9 @@ const buttonStyle = {
   backgroundColor: '#f26100'
 }
 
-const containerStyle = {
-  marginTop: '10%'
-}
-
 const TextInput = ({ inputBorder, ...props }) => (
   <Input
-    containerStyle={{ marginBottom: 15, width: '100%', paddingHorizontal: 0 }}
+    containerStyle={{ width: '100%', paddingHorizontal: 0 }}
     inputStyle={{ paddingLeft: 20, color: inputBorder }}
     inputContainerStyle={{
       ...border(1, inputBorder),
@@ -89,7 +85,6 @@ const Home = ({ navigation, theme }) => {
       <Button
         raised
         buttonStyle={buttonStyle}
-        containerStyle={containerStyle}
         title="Find Birthdays"
         onPress={goToBirthdaysPage}
       />
