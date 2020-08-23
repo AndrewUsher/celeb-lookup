@@ -28,7 +28,7 @@
     "react-native-elements": "2.2.1",
     "react-native-gesture-handler": "1.7.0",
     "react-native-reanimated": "1.13.0",
-    "react-native-screens": "2.9.0",
+    "react-native-screens": "2.10.1",
     "react-native-web": "0.13.7",
     "react-query": "2.5.14",
     "styled-components": "5.0.0"
