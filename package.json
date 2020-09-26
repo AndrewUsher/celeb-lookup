@@ -18,7 +18,7 @@
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "5.7.4",
     "@react-navigation/stack": "5.9.1",
-    "expo": "38.0.9",
+    "expo": "39.0.3",
     "expo-web-browser": "8.3.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
