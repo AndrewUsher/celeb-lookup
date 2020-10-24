@@ -20,12 +20,21 @@ const launchGoogleSearch = (name) => async () => {
   await openBrowserAsync(`https://google.com/search?q=${encodedName}`)
 }
 
+const sortCelebsByName = celebs => celebs.sort((curr, next) => {
+  const currentName = curr.name.toLowerCase()
+  const nextName = next.name.toLowerCase()
+  if (currentName < nextName) return -1
+  if (currentName > nextName) return 1
+  return 0
+})
+
 export {
   border,
   createError,
   formatDay,
   formatMonth,
   launchGoogleSearch,
+  sortCelebsByName,
   validateMonth,
   validateDay
 }

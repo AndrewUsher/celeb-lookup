@@ -2,11 +2,11 @@ import React, { Fragment } from 'react'
 import { ActivityIndicator, ScrollView } from 'react-native'
 import { Avatar, ListItem } from 'react-native-elements'
 import { useQuery } from 'react-query'
-import { launchGoogleSearch } from '../helpers'
+import { launchGoogleSearch, sortCelebsByName } from '../helpers'
 
 const Birthdays = ({ route }) => {
   const day = route.params.day
-  const { isLoading, data } = useQuery(['birthday', day], () => fetch(
+  const { isLoading, data: celebs } = useQuery(['birthday', day], () => fetch(
       `https://celeb-birthday-service.andrewusher00.now.sh/api/birthdays.js?day=${day}`
   )
     .then(r => r.json()))
@@ -14,9 +14,9 @@ const Birthdays = ({ route }) => {
   return (
     <Fragment>
       {isLoading && <ActivityIndicator />}
-      {data && (
+      {celebs && (
         <ScrollView>
-          {data.map(celeb => (
+          {sortCelebsByName(celebs).map(celeb => (
             <ListItem
               key={celeb._id}
               onPress={launchGoogleSearch(celeb.name)}
