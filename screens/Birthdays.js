@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { ActivityIndicator, ScrollView } from 'react-native'
-import { ListItem } from 'react-native-elements'
+import { Avatar, ListItem } from 'react-native-elements'
 import { useQuery } from 'react-query'
 import { launchGoogleSearch } from '../helpers'
 
@@ -19,11 +19,14 @@ const Birthdays = ({ route }) => {
           {data.map(celeb => (
             <ListItem
               key={celeb._id}
-              leftAvatar={{ source: { uri: celeb.image } }}
-              title={celeb.name}
               onPress={launchGoogleSearch(celeb.name)}
               bottomDivider
-            />
+            >
+              <Avatar source={{ uri: celeb.image }} rounded />
+              <ListItem.Title>
+                {celeb.name}
+              </ListItem.Title>
+            </ListItem>
           ))}
         </ScrollView>
       )}
