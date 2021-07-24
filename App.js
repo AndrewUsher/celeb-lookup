@@ -1,5 +1,6 @@
 import React from 'react'
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { ThemeProvider } from 'styled-components'
@@ -30,9 +31,13 @@ const AppWrapper = () => {
   )
 }
 
+const queryClient = new QueryClient()
+
 const App = () => (
   <AppearanceProvider>
-    <AppWrapper />
+    <QueryClientProvider client={queryClient}>
+      <AppWrapper />
+    </QueryClientProvider>
   </AppearanceProvider>
 )
 
