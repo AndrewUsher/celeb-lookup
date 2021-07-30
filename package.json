@@ -38,7 +38,7 @@
     "@drewster/eslint-config": "1.0.2",
     "babel-eslint": "10.1.0",
     "babel-preset-expo": "8.4.1",
-    "eslint": "7.31.0",
+    "eslint": "7.32.0",
     "standard-version": "9.3.1"
   },
   "resolutions": {
