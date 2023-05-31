@@ -30,7 +30,7 @@
     "react-native-screens": "3.4.0",
     "react-native-web": "0.13.18",
     "react-query": "3.19.0",
-    "styled-components": "5.3.0"
+    "styled-components": "5.3.11"
   },
   "devDependencies": {
     "@babel/core": "7.14.8",
