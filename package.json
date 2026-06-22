@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.14.8",
-    "@babel/runtime": "7.14.8",
+    "@babel/runtime": "7.29.7",
     "@drewster/eslint-config": "1.0.2",
     "babel-eslint": "10.1.0",
     "babel-preset-expo": "8.4.1",
@@ -43,7 +43,7 @@
   },
   "resolutions": {
     "@babel/core": "7.14.8",
-    "@babel/runtime": "7.14.8"
+    "@babel/runtime": "7.29.7"
   },
   "private": true
 }
